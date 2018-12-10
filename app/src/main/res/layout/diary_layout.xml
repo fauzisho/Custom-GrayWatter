@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/diary_img"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg"/>
+
+    <com.cravel.cravel.custom.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:fill_color="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_img"
+        app:srcCompat="@drawable/bg"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_img"
+        app:layout_constraintLeft_toRightOf="@+id/profile_img"
+        app:layout_constraintRight_toLeftOf="@+id/share_btn"
+        app:layout_constraintTop_toTopOf="@+id/profile_img">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/profile_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mr Travel"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/diary_location_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bali, Indonesia"
+            android:textColor="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/share_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/bookmark_btn"
+        app:layout_constraintRight_toLeftOf="@+id/bookmark_btn"
+        app:layout_constraintTop_toTopOf="@+id/bookmark_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_near_me_black_24dp"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/bookmark_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_img"
+        app:srcCompat="@drawable/ic_turned_in_not_black_24dp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/caption_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="My Bali Diary #4: Visiting Bias Tugel, one of the hidden gem of beach in bali"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_img"/>
+
+</android.support.constraint.ConstraintLayout>
